@@ -1,0 +1,77 @@
+
+> cuddly-train@1.0.0 dev
+> tsx src/index.ts demo
+
+🔍 Web3 Bug Scanner Demo
+========================
+
+
+📁 File: demo.sol
+==================================================
+
+🚨 VULNERABILITIES:
+🟠 [HIGH] Potential Integer Overflow/Underflow
+   Arithmetic operations without SafeMath or proper bounds checking
+   Location: Line 17, Column 30
+   💡 Use SafeMath library or Solidity 0.8+ built-in overflow protection
+
+🟠 [HIGH] Potential Integer Overflow/Underflow
+   Arithmetic operations without SafeMath or proper bounds checking
+   Location: Line 33, Column 47
+   💡 Use SafeMath library or Solidity 0.8+ built-in overflow protection
+
+🟠 [HIGH] Potential Integer Overflow/Underflow
+   Arithmetic operations without SafeMath or proper bounds checking
+   Location: Line 34, Column 34
+   💡 Use SafeMath library or Solidity 0.8+ built-in overflow protection
+
+🟡 [MEDIUM] Use of tx.origin
+   tx.origin should not be used for authorization
+   Location: Line 21, Column 18
+   💡 Use msg.sender instead of tx.origin for authorization
+
+🟡 [MEDIUM] Use of tx.origin
+   tx.origin should not be used for authorization
+   Location: Line 22, Column 17
+   💡 Use msg.sender instead of tx.origin for authorization
+
+🟡 [MEDIUM] Timestamp Dependence
+   Reliance on block.timestamp for critical logic
+   Location: Line 28, Column 51
+   💡 Avoid using block.timestamp for critical logic or randomness
+
+⛽ GAS OPTIMIZATIONS:
+   • Cache array length in loops to save gas
+   • Consider making state variables private if not accessed externally
+   • Explicitly initializing variables to 0 wastes gas
+
+🎨 STYLE ISSUES:
+   • Constant 'rate' should be in UPPER_CASE
+   • Line 6: Missing spaces around assignment operator
+   • Line 9: Trailing whitespace detected
+   • Line 12: Trailing whitespace detected
+   • Line 16: Trailing whitespace detected
+   • Line 17: Missing spaces around assignment operator
+   • Line 19: Trailing whitespace detected
+   • Line 25: Trailing whitespace detected
+   • Line 30: Trailing whitespace detected
+   • Line 34: Missing spaces around assignment operator
+   • Line 10: Public function 'withdraw' lacks documentation
+   • Line 20: Public function 'transferOwnership' lacks documentation
+   • Line 26: Public function 'getRandomNumber' lacks documentation
+   • Line 31: Public function 'unsafeLoop' lacks documentation
+   • Function 'withdraw' might benefit from 'view' or 'pure' modifier
+   • Function 'transferOwnership' might benefit from 'view' or 'pure' modifier
+   • Function 'unsafeLoop' might benefit from 'view' or 'pure' modifier
+   • Magic numbers detected - consider using named constants
+
+
+📊 SUMMARY:
+==============================
+Files scanned: 1
+Vulnerabilities found: 6
+Gas optimizations: 3
+Style issues: 18
+
+⚠️  CRITICAL ACTION REQUIRED: 0 critical and 3 high severity vulnerabilities found!
+
